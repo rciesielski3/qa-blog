@@ -70,7 +70,9 @@ const Home: NextPage = () => {
         {currentPosts.map((post) => (
           <Link key={post.id} href={`/posts/${post.id}`}>
             <div className="mb-4 p-4 bg-white shadow-md rounded hover:bg-gray-400">
-              <h2 className="text-2xl font-bold text-black">{post.title}</h2>
+              <h2 className="text-2xl font-bold text-black text-center">
+                {post.title}
+              </h2>
               <p className="text-gray-500 ">
                 {truncateDescription(post.description)}
               </p>

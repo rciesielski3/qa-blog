@@ -36,8 +36,7 @@ const PostPage = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-300">
-      <h2 className="text-4xl font-bold text-blue-500 ">Single post details</h2>
+    <div className="flex flex-col items-center text-center justify-center min-h-screen bg-gray-400">
       <div className="block max-w-sm p-6 bg-gray-600 border border-gray-300 rounded-lg shadow ">
         <h3 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
           {post?.title}
