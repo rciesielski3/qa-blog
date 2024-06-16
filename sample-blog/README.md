@@ -1,5 +1,7 @@
 ## On-line version
 
+https://rciesielski3.github.io/sampleBlog/
+
 ## Requirements
 
 **Part 1: Create a Next.js project with TypeScript and Tailwind CSS**
