@@ -1,6 +1,6 @@
 ## On-line version
 
-https://rciesielski3.github.io/qa-blog/
+https://qa-blog.onrender.com
 
 ## Requirements
 
