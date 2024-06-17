@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Button, Spinner } from "flowbite-react";
 
 type Post = {
   id: number;
@@ -32,7 +33,15 @@ const PostPage = () => {
     }
   }, [id]);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading)
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <Spinner
+          size="xl"
+          className="text-gray-400 animate-spin fill-blue-600"
+        />
+      </div>
+    );
   if (error) return <div>{error}</div>;
 
   return (
@@ -43,6 +52,13 @@ const PostPage = () => {
         </h3>
         <p className="font-normal text-gray-200 ">{post?.description}</p>
       </div>
+      <Button
+        className="mt-4 hover:bg-gray-600"
+        color="dark"
+        onClick={() => router.push("/")}
+      >
+        Back to Main Page
+      </Button>
     </div>
   );
 };

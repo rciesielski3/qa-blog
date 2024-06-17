@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import type { NextPage } from "next";
 import axios from "axios";
 import Link from "next/link";
-import { Pagination } from "flowbite-react";
+import { Pagination, Spinner } from "flowbite-react";
 import Footer from "../components/Footer";
 
 type Post = {
@@ -34,7 +34,15 @@ const Home: NextPage = () => {
     fetchPosts();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading)
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <Spinner
+          size="xl"
+          className="text-gray-400 animate-spin  fill-blue-600"
+        />
+      </div>
+    );
   if (error) return <div>{error}</div>;
 
   const indexOfLastPost = currentPage * postsPerPage;
